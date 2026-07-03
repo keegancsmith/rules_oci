@@ -131,6 +131,7 @@ def _calculate_descriptor(ctx, idx, layer, zstd, jq, coreutils, regctl):
         ],
         mnemonic = "OCIDescriptor",
         progress_message = "OCI Descriptor %{input}",
+        toolchain = None,
     )
     return descriptor
 

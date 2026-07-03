@@ -195,6 +195,7 @@ def _load_impl(ctx):
             coreutils.coreutils_info.bin,
         ],
         mnemonic = "OCITarballManifest",
+        toolchain = None,
     )
 
     # This action produces a large output and should rarely be used as it puts load on the cache.
@@ -211,6 +212,7 @@ def _load_impl(ctx):
         outputs = [tarball],
         arguments = [tar_args],
         mnemonic = "OCITarball",
+        toolchain = None,
     )
 
     # Create an executable runner script that will create the tarball at runtime,
